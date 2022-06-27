@@ -22,3 +22,7 @@
   width: 65%;
   height: 65%;
 }
+
+.footer{
+  color: var(--secondary);
+}
