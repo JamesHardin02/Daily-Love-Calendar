@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button'
 import { styled } from '@mui/system'
+
 function Nav(props){
   const {
     categories = [],
@@ -22,7 +23,7 @@ function Nav(props){
   })
 
   return(
-    <div className='flex flex-col sm:flex-row'>
+    <div className='grid grid-rows-2 grid-flow-col sm:flex sm:grid-rows-none'>
       {categories.map((category) => (
           <StyledButton variant='contained'
             className={` bg-neutral-500 ${ //if currentCategory.name is the category iterated on then add navActive class

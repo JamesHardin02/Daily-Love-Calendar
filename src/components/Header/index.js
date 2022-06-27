@@ -15,13 +15,13 @@ export default function Header(props) {
   }, [currentCategory]);
   
   return (
-    <header className='bg-red-900 flex'>
-      <h2 className='navActive'>
-        <a data-testid="link" href="/">
-          Daily Love Calendar
-        </a>
-      </h2>
-      <nav>
+    <header className='bg-red-900 flex flex-col'>
+      <a className='navActive text-center flex flex-col justify-center sm:w-96 sm:self-center'data-testid="link" href="/">
+        <h2 className='text-xl font-semibold'>       
+            Daily Love Calendar
+        </h2>
+      </a>
+      <nav className='sm:self-center'>
         <Nav       
           categories={categories}
           setCurrentCategory={setCurrentCategory}
