@@ -8,8 +8,8 @@ function Nav(props){
   } = props;
 
   const StyledButton = styled(Button, {})({
-    color: '#4e372e',
-    border: '5px solid #eedddd',
+    color: '#eedddd',
+    border: '5px solid #3B3636',
     backgroundColor: '#D3B5B5',
     borderRadius: '500px',
     margin:'5px',
@@ -25,7 +25,7 @@ function Nav(props){
     <div className='flex flex-col sm:flex-row'>
       {categories.map((category) => (
           <StyledButton variant='contained'
-            className={` ${ //if currentCategory.name is the category iterated on then add navActive class
+            className={` bg-neutral-500 ${ //if currentCategory.name is the category iterated on then add navActive class
               currentCategory.name === category.name && `navActive`
               }`}
             key={category.name}
