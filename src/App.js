@@ -8,11 +8,11 @@ import activeSection from './utils/active-section';
 function App() {
   const [categories] = useState([
     {
-      name: 'Homepage'
+      name: "Homepage"
     },
-    { name: 'Calendars'},
-    { name: 'Dashboard'},
-    { name: 'Login'},
+    { name: "Calendars"},
+    { name: "Dashboard"},
+    { name: "Login"},
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
