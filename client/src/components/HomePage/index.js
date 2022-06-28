@@ -27,7 +27,7 @@ export default function HomePage(){
             Create A Calendar
         </StyledButton>
       </div>
-      <div className='homepage-photos mx-auto sm:w-96'>
+      <div className='homepage-photos mx-auto mt-5 sm:w-96'>
         <img alt='fathers day appreciation example' src={fathersDayPicture}></img>
       </div>
     </section>

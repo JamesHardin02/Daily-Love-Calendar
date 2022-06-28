@@ -1,7 +1,7 @@
 import heart from '../../assets/images/heart-icon.png'
 export default function Header() {
   return (
-    <footer className='bg-red-900 flex justify-between'>
+    <footer className='bg-red-900 flex justify-between mt-10'>
       <p className='footer text-xl font-semibold sm:ml-12'>       
           Made with <img alt="heart" className="inline"src={heart}></img> by Daily Love Calendar
       </p>

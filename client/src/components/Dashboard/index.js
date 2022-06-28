@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button'
+import { styled } from '@mui/system'
 import TextField from '@mui/material/TextField'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { red } from '@mui/material/colors'
@@ -40,10 +41,31 @@ function Dashboard() {
 
     }
   })
+
+  const StyledButton = styled(Button, {})({
+    color: '#eedddd',
+    border: '5px solid #3B3636',
+    backgroundColor: '#D3B5B5',
+    borderRadius: '500px',
+    margin:'5px',
+    padding: '7px',
+    fontSize: 'larger',
+    '&:hover': {
+                backgroundColor: "#d36565",
+                borderColor: "#eedddd"
+              }
+  })
   return (
-    <section className='margin-top flex-col-center'>
+    <section className='flex flex-col items-center'>
       <h1 className="text-center text-xl font-semibold">Create A Calendar</h1>
-      <form className='flex-col-center' onSubmit={handleSubmit}>
+      <form className='flex flex-col w-full mb-8 sm:w-96' onSubmit={handleSubmit}>
+        <div>
+          <br/>
+          <br/>
+            <p className='text-center'>image uploader here</p>
+          <br/>
+          <br/>
+        </div>
         <ThemeProvider theme={theme}>
           {/* message/quote */}
           <TextField 
@@ -67,8 +89,16 @@ function Dashboard() {
             > Submit </Button>
           </div>
         </ThemeProvider>
-
       </form>
+
+      <div>
+        <h1 className="text-center text-xl font-semibold">View Your Calendars</h1>
+        <StyledButton
+          variant='contained'
+          className='bg-neutral-500 sm:w-96 sm:self-center'>
+            View Calendars
+        </StyledButton>
+      </div>
     </section>
   );
 }
