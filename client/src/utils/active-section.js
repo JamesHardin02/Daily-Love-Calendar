@@ -9,15 +9,6 @@ const activeSection = (currentCategory) => {
     return <HomePage></HomePage> 
   }else if (currentCategory.name === "Dashboard"){
     return <Dashboard></Dashboard>
-    // if(!userLoggedIn){
-    //   return <Login></Login>
-    // } else{
-    //   return <Dashboard></Dashboard>
-    // }
-  // }else if (currentCategory.name === "Calendars"){
-  //   return <Calendars></Calendars>
-  // }else if (currentCategory.name === "Login"){
-  //   return <Login></Login>
   }
 };
 
