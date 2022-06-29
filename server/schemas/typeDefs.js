@@ -8,6 +8,11 @@ const typeDefs = gql`
         username: String
         email: String
         password: String
+        calendars: [Calendar]
+    }
+
+    type Calendar {
+        _id: ID
     }
 
     type Auth {
