@@ -26,6 +26,11 @@ const userSchema = new Schema(
         ref: 'Calendar'
       }
     ]
+  },
+  {
+    toJSON: {
+      virtuals: true
+    }
   }
 ); 
 
