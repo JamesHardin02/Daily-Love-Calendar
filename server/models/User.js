@@ -19,13 +19,13 @@ const userSchema = new Schema(
       type: String,
       required: true,
       minlength: 5
-    }
-    //calendars: [
-    //  {
-    //   type: Schema.Types.ObjectId,
-    //    ref: 'Calendar'
-    //  }
-    //]
+    },
+    calendars: [
+      {
+       type: Schema.Types.ObjectId,
+        ref: 'Calendar'
+      }
+    ]
   }
 ); 
 
