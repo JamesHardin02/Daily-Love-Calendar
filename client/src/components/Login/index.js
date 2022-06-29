@@ -6,8 +6,8 @@ import { red } from '@mui/material/colors'
 import { validateEmail } from '../../utils/helpers';
 
 export default function Login() {
-  const [formStateLogin, setFormStateLogin] = useState({ name: '', email: ''});
-  const [formStateSignUp, setFormStateSignUp] = useState({ name: '', email: ''});
+  const [formStateLogin, setFormStateLogin] = useState({ loginName: '', loginEmail: ''});
+  const [formStateSignUp, setFormStateSignUp] = useState({ signUpName: '', signUpEmail: ''});
   const [errorMessageLogin, setErrorMessageLogin] = useState('');
   const [errorMessageSignUp, setErrorMessageSignUp] = useState('');
   const { loginName, loginEmail} = formStateLogin;
