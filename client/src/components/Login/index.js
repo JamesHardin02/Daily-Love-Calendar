@@ -6,12 +6,12 @@ import { red } from '@mui/material/colors'
 import { validateEmail } from '../../utils/helpers';
 
 export default function Login() {
-  const [formStateLogin, setFormStateLogin] = useState({ loginName: '', loginEmail: ''});
-  const [formStateSignUp, setFormStateSignUp] = useState({ signUpName: '', signUpEmail: ''});
+  const [formStateLogin, setFormStateLogin] = useState({ loginName: '', loginEmail: '', loginPassword: ''});
+  const [formStateSignUp, setFormStateSignUp] = useState({ signUpName: '', signUpEmail: '', signUpPassword: ''});
   const [errorMessageLogin, setErrorMessageLogin] = useState('');
   const [errorMessageSignUp, setErrorMessageSignUp] = useState('');
-  const { loginName, loginEmail} = formStateLogin;
-  const { signUpName, signUpEmail} = formStateSignUp;
+  const { loginName, loginEmail, loginPassword } = formStateLogin;
+  const { signUpName, signUpEmail, signUpPassword } = formStateSignUp;
   // this function is called when user submits their login info
   const handleSubmitLogin = (e) => {
     e.preventDefault();
@@ -103,6 +103,14 @@ export default function Login() {
           placeholder="email@email.com"
           >
           </TextField>
+          {/* password */}
+          <TextField 
+          onBlur={handleChangeLogin}
+          type="text" name="loginPassword" defaultValue={loginPassword}
+          variant="filled" color="warning" label="Password"
+          placeholder="your password here"
+          >
+          </TextField>
           {errorMessageLogin && (
             <div>
               <p className="error-text">{errorMessageLogin}</p>
@@ -135,6 +143,14 @@ export default function Login() {
           type="text" name="signUpEmail" defaultValue={signUpEmail}
           variant="filled" color="warning" label="Email Address"
           placeholder="email@email.com"
+          >
+          </TextField>
+          {/* password */}
+          <TextField 
+          onBlur={handleChangeSignUp}
+          type="text" name="signUpPassword" defaultValue={signUpPassword}
+          variant="filled" color="warning" label="Password"
+          placeholder="your password here"
           >
           </TextField>
           {errorMessageSignUp && (
