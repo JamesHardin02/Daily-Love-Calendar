@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SimpleFileUpload from 'react-simple-file-upload'
 import Button from '@mui/material/Button'
 import { styled } from '@mui/system'
 import TextField from '@mui/material/TextField'
@@ -55,17 +56,21 @@ function Dashboard() {
                 borderColor: "#eedddd"
               }
   })
+
+  function handleFileUpload(url){
+    console.log('The URL of the file is ' + url)
+  }
+
   return (
     <section className='flex flex-col items-center'>
-      <h1 className="text-center text-xl font-semibold">Create A Calendar</h1>
+      <h1 className="navActive text-center text-xl font-semibold">Create A Calendar</h1>
+      <div className="self-center mb-5 mt-4">
+        <SimpleFileUpload
+          apiKey="5cbac5fce1d845f2b4f9c64d40049a94"
+          onSuccess={handleFileUpload}
+        />
+      </div>
       <form className='flex flex-col w-full mb-8 sm:w-96' onSubmit={handleSubmit}>
-        <div>
-          <br/>
-          <br/>
-            <p className='text-center'>image uploader here</p>
-          <br/>
-          <br/>
-        </div>
         <ThemeProvider theme={theme}>
           {/* message/quote */}
           <TextField 
