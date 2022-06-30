@@ -4,6 +4,9 @@ import TextField from '@mui/material/TextField'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { red } from '@mui/material/colors'
 import { validateEmail } from '../../utils/helpers';
+import { useMutation } from '@apollo/client';
+import { ADD_USER, LOGIN_USER } from '../../utils/mutations';
+import Auth from '../../utils/auth';
 
 export default function Login() {
   const [formStateLogin, setFormStateLogin] = useState({ loginName: '', loginEmail: '', loginPassword: ''});
@@ -12,11 +15,20 @@ export default function Login() {
   const [errorMessageSignUp, setErrorMessageSignUp] = useState('');
   const { loginName, loginEmail, loginPassword } = formStateLogin;
   const { signUpName, signUpEmail, signUpPassword } = formStateSignUp;
+  
+  const [login] = useMutation(LOGIN_USER);
   // this function is called when user submits their login info
-  const handleSubmitLogin = (e) => {
+  const handleSubmitLogin = async (e) => {
     e.preventDefault();
-    if (!errorMessageLogin) {
-      console.log('Login Form: ', formStateLogin);
+    try {
+      const { data } = await login({
+        variables: { ...formStateLogin },
+      });
+
+      console.log("Logged in")
+      Auth.login(data.login.token);
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -40,12 +52,18 @@ export default function Login() {
       setFormStateLogin({ ...formStateLogin, [e.target.name]: e.target.value });
     }
   };
-
+    const [addUser] =useMutation(ADD_USER)
     // this function is called when user submits their sign up info
-    const handleSubmitSignUp = (e) => {
-      e.preventDefault();
-      if (!errorMessageSignUp) {
-        console.log('Sign Up Form: ', formStateSignUp);
+    const handleSubmitSignUp = async (event) => {
+      event.preventDefault();
+      try {
+        const { data } = await addUser({
+          variables: { ...formStateSignUp },
+        });
+        console.log(data)
+        Auth.login(data.addUser.token);
+      } catch (error) {
+        console.error(error);
       }
     };
   
@@ -91,7 +109,7 @@ export default function Login() {
           <TextField 
           onBlur={handleChangeLogin}
           type="text" name="loginName" defaultValue={loginName}
-          variant="filled" color="warning" label="name"
+          variant="filled" color="warning" label="Name"
           placeholder="your name here"
           >
           </TextField>
@@ -132,15 +150,15 @@ export default function Login() {
           {/* name */}
           <TextField 
           onBlur={handleChangeSignUp}
-          type="text" name="signUpName" defaultValue={signUpName}
-          variant="filled" color="warning" label="name"
+          type="text" name="username" defaultValue={signUpName}
+          variant="filled" color="warning" label="Name"
           placeholder="your name here"
           >
           </TextField>
           {/* email */}
           <TextField 
           onBlur={handleChangeSignUp}
-          type="text" name="signUpEmail" defaultValue={signUpEmail}
+          type="text" name="email" defaultValue={signUpEmail}
           variant="filled" color="warning" label="Email Address"
           placeholder="email@email.com"
           >
@@ -148,7 +166,7 @@ export default function Login() {
           {/* password */}
           <TextField 
           onBlur={handleChangeSignUp}
-          type="text" name="signUpPassword" defaultValue={signUpPassword}
+          type="text" name="password" defaultValue={signUpPassword}
           variant="filled" color="warning" label="Password"
           placeholder="your password here"
           >
