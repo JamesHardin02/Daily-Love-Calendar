@@ -10,7 +10,7 @@ const CalendarSchema = new Schema(
 
         },
         quotes: {
-            
+            type: String
         }
     }
 )
