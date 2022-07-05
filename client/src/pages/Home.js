@@ -1,6 +1,6 @@
 import Button from '@mui/material/Button'
 import { styled } from '@mui/system'
-import fathersDayPicture from '../../assets/images/homepage-ex1.jpg'
+import fathersDayPicture from '../assets/images/homepage-ex1.jpg'
 
 export default function HomePage(){
   const StyledButton = styled(Button, {})({

@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header'
 import Footer from './components/Footer'
-import activeSection from './utils/active-section';
+import Login from './pages/Login'
+import Home from './pages/Home'
+import Dashboard from './pages/Dashboard'
+import Calendars from './pages/Calendars'
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -33,7 +37,7 @@ const client = new ApolloClient({
 function App() {
   const [categories] = useState([
     {
-      name: "Homepage"
+      name: "Home"
     },
     { name: "Calendars"},
     { name: "Dashboard"},
@@ -44,17 +48,41 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <div className="bg-neutral-200">
-        <Header
-          categories={categories}
-          setCurrentCategory={setCurrentCategory}
-          currentCategory={currentCategory}>
-        </Header>
-        <main>
-          {activeSection(currentCategory)}
-        </main>
-        <Footer></Footer>
-      </div>
+      <Router>
+        <div className="bg-neutral-200">
+          <Header
+            categories={categories}
+            setCurrentCategory={setCurrentCategory}
+            currentCategory={currentCategory}>
+          </Header>
+          <div>
+            <Routes>
+              <Route
+                path="/Home"
+                element={<Home />}
+              />
+              <Route
+                path="/Calendars"
+                element={<Calendars />}
+              />
+              <Route
+                path="/Login"
+                element={<Login />}
+              />
+              <Route path="/Dashboard">
+                <Route path=":username" element={<Dashboard />} />
+                <Route path="" element={<Dashboard />} />
+              </Route>
+              <Route
+                path="*"
+                element={<Home />}
+              />
+            </Routes>
+          </div>
+          <Footer></Footer>
+        </div>
+      </Router>
+
     </ApolloProvider>
   );
 }

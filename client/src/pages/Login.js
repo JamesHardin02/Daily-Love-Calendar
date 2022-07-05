@@ -3,10 +3,10 @@ import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { red } from '@mui/material/colors'
-import { validateEmail } from '../../utils/helpers';
+import { validateEmail } from '../utils/helpers';
 import { useMutation } from '@apollo/client';
-import { ADD_USER, LOGIN_USER } from '../../utils/mutations';
-import Auth from '../../utils/auth';
+import { ADD_USER, LOGIN_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 export default function Login() {
   const [formStateLogin, setFormStateLogin] = useState({ loginName: '', loginEmail: '', loginPassword: ''});

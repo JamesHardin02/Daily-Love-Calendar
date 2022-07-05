@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button'
 import { styled } from '@mui/system'
 
@@ -35,7 +36,7 @@ function Nav(props){
                 setCurrentCategory(category);
               }}
             >
-              {category.name}
+              <Link to={`/${category.name}`}>{category.name}</Link>
             </span>
           </StyledButton>
       ))}
