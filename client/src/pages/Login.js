@@ -9,11 +9,11 @@ import { ADD_USER, LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 export default function Login() {
-  const [formStateLogin, setFormStateLogin] = useState({ loginName: '', loginEmail: '', loginPassword: ''});
+  const [formStateLogin, setFormStateLogin] = useState({ loginEmail: '', loginPassword: ''});
   const [formStateSignUp, setFormStateSignUp] = useState({ signUpName: '', signUpEmail: '', signUpPassword: ''});
   const [errorMessageLogin, setErrorMessageLogin] = useState('');
   const [errorMessageSignUp, setErrorMessageSignUp] = useState('');
-  const { loginName, loginEmail, loginPassword } = formStateLogin;
+  const { loginEmail, loginPassword } = formStateLogin;
   const { signUpName, signUpEmail, signUpPassword } = formStateSignUp;
   
   const [login] = useMutation(LOGIN_USER);
@@ -105,18 +105,10 @@ export default function Login() {
       <h1 className="text-center navActive text-xl font-semibold">Login Form</h1>
       <form className='flex flex-col w-full mb-8 sm:w-96' onSubmit={handleSubmitLogin}>
         <ThemeProvider theme={theme}>
-          {/* name */}
-          <TextField 
-          onBlur={handleChangeLogin}
-          type="text" name="loginName" defaultValue={loginName}
-          variant="filled" color="warning" label="Name"
-          placeholder="your name here"
-          >
-          </TextField>
           {/* email */}
           <TextField 
           onBlur={handleChangeLogin}
-          type="text" name="loginEmail" defaultValue={loginEmail}
+          type="text" name="email" defaultValue={loginEmail}
           variant="filled" color="warning" label="Email Address"
           placeholder="email@email.com"
           >
@@ -124,7 +116,7 @@ export default function Login() {
           {/* password */}
           <TextField 
           onBlur={handleChangeLogin}
-          type="text" name="loginPassword" defaultValue={loginPassword}
+          type="text" name="password" defaultValue={loginPassword}
           variant="filled" color="warning" label="Password"
           placeholder="your password here"
           >
