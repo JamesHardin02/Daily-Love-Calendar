@@ -26,9 +26,10 @@ function Nav(props){
   return(
     <div className='grid grid-rows-2 grid-flow-col sm:flex sm:grid-rows-none'>
       {categories.map((category) => (
-        <Link to={`/${category.name}`}>
+        
+        <Link className='justify-self-center' to={`/${category.name}`}>
           <StyledButton variant='contained'
-            className={` bg-neutral-500 ${ //if currentCategory.name is the category iterated on then add navActive class
+            className={`w-36 bg-neutral-500 ${ //if currentCategory.name is the category iterated on then add navActive class
               currentCategory.name === category.name && `navActive`
               }`}
             key={category.name}
