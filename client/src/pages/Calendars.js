@@ -1,33 +1,8 @@
-import Button from '@mui/material/Button'
-import { styled } from '@mui/system'
-
 export default function HomePage(){
-  const StyledButton = styled(Button, {})({
-    color: '#eedddd',
-    border: '5px solid #3B3636',
-    backgroundColor: '#D3B5B5',
-    borderRadius: '500px',
-    margin:'5px',
-    padding: '7px',
-    fontSize: 'larger',
-    '&:hover': {
-                backgroundColor: "#d36565",
-                borderColor: "#eedddd"
-              }
-  })
-
   return(
     <section>
       <div className='flex flex-col'>     
-        <p className='text-center font-semibold text-xl'>Send your loved ones a Daily Love Calendar to show how much you appreciate them</p>
-        <StyledButton
-          variant='contained'
-          className='bg-neutral-500 sm:w-96 sm:self-center'>
-            Create A Calendar
-        </StyledButton>
-      </div>
-      <div className='homepage-photos mx-auto mt-5 sm:w-96'>
-        <p>Calendars here!</p>
+        <p className='text-center font-semibold text-xl'>Calendars here!</p>
       </div>
     </section>
   )

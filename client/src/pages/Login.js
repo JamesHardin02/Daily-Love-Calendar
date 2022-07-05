@@ -102,7 +102,7 @@ export default function Login() {
 
   return (
     <section className='flex flex-col items-center'>
-      <h1 className="text-center navActive">Login Form</h1>
+      <h1 className="text-center navActive text-xl font-semibold">Login Form</h1>
       <form className='flex flex-col w-full mb-8 sm:w-96' onSubmit={handleSubmitLogin}>
         <ThemeProvider theme={theme}>
           {/* name */}
@@ -144,7 +144,7 @@ export default function Login() {
           </div>
         </ThemeProvider>
       </form>
-      <h1 className="text-center navActive">No Account? Sign Up!</h1>
+      <h1 className="text-center navActive text-xl font-semibold">No Account? Sign Up!</h1>
       <form className='flex flex-col w-full mb-8 sm:w-96' onSubmit={handleSubmitSignUp}>
         <ThemeProvider theme={theme}>
           {/* name */}
