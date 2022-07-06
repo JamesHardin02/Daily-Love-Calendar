@@ -5,6 +5,7 @@ import { styled } from '@mui/system'
 import TextField from '@mui/material/TextField'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { red } from '@mui/material/colors'
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
   const [formState, setFormState] = useState({ message: '' });
@@ -101,7 +102,7 @@ function Dashboard() {
         <StyledButton
           variant='contained'
           className='bg-neutral-500 sm:w-96 sm:self-center'>
-            View Calendars
+            <Link to={'/Calendars'}>View Calendars</Link>
         </StyledButton>
       </div>
     </section>
