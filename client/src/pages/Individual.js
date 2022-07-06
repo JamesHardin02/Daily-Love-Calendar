@@ -7,12 +7,12 @@ export default function Individual() {
     return (
         <Container 
         style={{
-          minWidth: "100%",
-          height: "150vh",
+        minWidth: "100%",
+        height: "150vh",
         }}
         >
             {calendars.map((work) => (
-            <Calendar key={work.id} name={work.name} background={work.background} calendar_img={work.calendar_img} quote={work.quote} />
+            <Calendar key={work.id} name={work.name} calendar_img={work.calendar_img} quote={work.quote} />
             ))}
         </Container> 
     )
