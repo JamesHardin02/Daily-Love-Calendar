@@ -6,10 +6,13 @@ import covers from '../components/Cover/covers.json';
 
 export default function Calendars(){
   return(
-    <section className="container">
-      <Typography gutterBottom variant="h2" component="div" textAlign="center">
-        Calendars
-      </Typography>
+    <section className="flex flex-col items-center">
+      <div className='self-center w-72'>
+        <Typography className="navActive text-center text-xl font-semibold" gutterBottom variant="h2" component="div" textAlign="center">
+          Calendars
+        </Typography>
+      </div>
+
       <Grid
         container
         direction="row"
