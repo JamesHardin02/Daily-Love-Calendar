@@ -1,30 +1,34 @@
 import React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { CardHeader } from '@mui/material';
 
 
-export default function Project(props) {
-  return (
-    <Card sx={{ maxWidth: 365, margin: 5 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        src={props.cover_img}
-        alt={props.name}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div" textAlign="center">
-          {props.name}
-        </Typography>
-      </CardContent>
-      <CardActions sx={{ display: "flex", justifyContent: "center"}}>
-        <Button size="small">View Calendar</Button>
-        <Button size="small">Edit Calendar</Button>
-      </CardActions>
-    </Card>
-  );
+
+export default function Calendar(props) {
+  if (props.name === "Happy Mother's Day") {
+    return (
+        <Card sx={{ margin: 0 }}>
+            <CardHeader
+            component={Typography}
+            title={props.name}
+            textAlign="center"
+            >
+            </CardHeader>
+            <CardMedia
+                component="img"
+                style={{ height: 900 }}
+                src={props.calendar_img}
+                alt={props.name}
+            />
+            <CardContent sx={{ display: "flex", justifyContent: "center"}}>
+                <Typography gutterBottom variant="h5" component="div" textAlign="center">
+                    {props.quote}
+                </Typography>
+            </CardContent>
+        </Card>
+    );
+  }
 }

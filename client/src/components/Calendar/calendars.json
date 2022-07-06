@@ -2,16 +2,19 @@
     {
         "id": 1,
         "name": "Happy Mother's Day", 
-        "cover_img": "https://th.bing.com/th/id/OIP.tq2eJZS1Gxrdp4s7giiPfgHaEK?pid=ImgDet&rs=1"
+        "calendar_img": "https://th.bing.com/th/id/R.bf04da7c171051776e8b2d5da35818a8?rik=G6D9RpGP8JgM6Q&riu=http%3a%2f%2fwww.j-dphoto.com%2fimages%2fuploaded%2fkerr_0000061___.jpg&ehk=i22jKNLx9g3wNDzsuP2ApYaeLjuT5INwU1voLNJIACk%3d&risl=&pid=ImgRaw&r=0",
+        "quote": "Thank you for everything you do, Mom, I love you - Vincent"
     },
     {
         "id": 2,
-        "name": "Cold Ones with the Boys", 
-        "cover_img": "https://media.istockphoto.com/photos/friends-toasting-with-beer-in-a-pub-picture-id491871578?k=6&m=491871578&s=170667a&w=0&h=KxmG2iE1FsuU9YvGKPRYMOIkg4fzzFbchDBHKPy_XS4="
+        "name": "Cold Ones with the Boys",
+        "calendar_img": "https://cdn8.dissolve.com/p/D430_47_662/D430_47_662_1200.jpg",
+        "quote": "Never forget when Nick left his card at Gin Mill, even though he can't remember - Thomas"
     },
     {
         "id": 3,
-        "name": "Stewart Extended Family Calendar", 
-        "cover_img": "https://afar-production.imgix.net/uploads/images/afar_post_headers/images/mKy9xw29QR/original_Reunion_InLine.jpg?auto=compress,format&fit=crop&crop=top&lossless=true&w=1080"
+        "name": "Stewart Extended Family Calendar",
+        "calendar_img": "https://live.staticflickr.com/2681/4262604251_f806b2251d_b.jpg",
+        "quote": "Can't believe I get to be in a family full of my best friends - Eva"
     }
 ]

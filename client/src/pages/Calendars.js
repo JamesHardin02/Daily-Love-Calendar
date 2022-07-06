@@ -1,8 +1,8 @@
 import React from 'react';
-import Calendar from '../components/Calendar'
+import Cover from '../components/Cover'
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import calendars from '../components/Calendar/calendars.json';
+import covers from '../components/Cover/covers.json';
 
 export default function Calendars(){
   return(
@@ -16,8 +16,8 @@ export default function Calendars(){
         justifyContent="center"
         alignItems="center"
       >
-          {calendars.map((work) => (
-          <Calendar key={work.id} name={work.name} cover_img={work.cover_img}/>
+          {covers.map((work) => (
+          <Cover key={work.id} name={work.name} cover_img={work.cover_img}/>
         ))}
       </Grid>
     </section>

@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import Calendars from './pages/Calendars'
+import Individual from './pages/Individual';
 
 import {
   ApolloClient,
@@ -64,6 +65,10 @@ function App() {
               <Route
                 path="/Calendars"
                 element={<Calendars />}
+              />
+              <Route
+                path="/Individual"
+                element={<Individual />}
               />
               <Route
                 path="/Login"
