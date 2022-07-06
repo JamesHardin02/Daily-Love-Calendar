@@ -2,16 +2,16 @@
     {
         "id": 1,
         "name": "Happy Mother's Day", 
-        "cover_img": "https://raw.githubusercontent.com/vidurham/professional-portfolio/main/assets/images/good-morning.JPG"
+        "cover_img": "https://th.bing.com/th/id/OIP.tq2eJZS1Gxrdp4s7giiPfgHaEK?pid=ImgDet&rs=1"
     },
     {
         "id": 2,
         "name": "Cold Ones with the Boys", 
-        "cover_img": "https://raw.githubusercontent.com/JamesHardin02/daily-love-calandar/develop/client/src/assets/images/cold-one.jpg"
+        "cover_img": "https://media.istockphoto.com/photos/friends-toasting-with-beer-in-a-pub-picture-id491871578?k=6&m=491871578&s=170667a&w=0&h=KxmG2iE1FsuU9YvGKPRYMOIkg4fzzFbchDBHKPy_XS4="
     },
     {
         "id": 3,
-        "name": "Stewart Family Calendar", 
-        "cover_img": "https://raw.githubusercontent.com/vidurham/professional-portfolio/main/assets/images/weather.JPG"
+        "name": "Stewart Extended Family Calendar", 
+        "cover_img": "https://afar-production.imgix.net/uploads/images/afar_post_headers/images/mKy9xw29QR/original_Reunion_InLine.jpg?auto=compress,format&fit=crop&crop=top&lossless=true&w=1080"
     }
 ]
