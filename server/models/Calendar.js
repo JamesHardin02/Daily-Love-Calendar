@@ -6,14 +6,18 @@ const CalendarSchema = new Schema(
             type: String,
             required: true
         },
-        picturesUrl: {
-            type: String,
-            required: true
-        },
-        quotes: {
-            type: String,
-            unique: true
-        }
+        picturesUrl: [ 
+            {
+                type: String,
+                required: true
+            },
+        ],
+        quotes: [
+            {
+                type: String,
+                unique: true
+            },
+        ]
     }
 )
 

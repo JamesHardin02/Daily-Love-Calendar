@@ -45,6 +45,10 @@ const resolvers = {
 
             const token = signToken(user);
             return {token, user};
+        },
+        buildCalendar: async (parent, args) => {
+            const calendar = await Calendar.create(args);
+            return calendar;
         }
     }
 };

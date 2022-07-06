@@ -23,3 +23,13 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const BUILD_CALENDAR = gql `
+  mutation BuildCalendar($name: String!, $picturesUrl: [String], $quotes: [String]) {
+    buildCalendar(name: $name, picturesUrl: $picturesUrl, quotes: $quotes) {
+      name
+      picturesUrl
+      quotes
+    }
+  }
+`

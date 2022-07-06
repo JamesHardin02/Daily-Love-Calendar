@@ -12,7 +12,9 @@ const typeDefs = gql`
     }
 
     type Calendar {
-        _id: ID
+        name: String
+        picturesUrl: [String]
+        quotes: [String]
     }
 
     type Auth {
@@ -29,6 +31,7 @@ const typeDefs = gql`
     type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
+        buildCalendar(name: String!, picturesUrl: [String], quotes: [String]): Calendar
     }
 `;
 
