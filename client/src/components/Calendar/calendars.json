@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Happy Mother's Day", 
+        "cover_img": "https://raw.githubusercontent.com/vidurham/professional-portfolio/main/assets/images/good-morning.JPG"
+    },
+    {
+        "id": 2,
+        "name": "Cold Ones with the Boys", 
+        "cover_img": "https://raw.githubusercontent.com/JamesHardin02/daily-love-calandar/develop/client/src/assets/images/cold-one.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Stewart Family Calendar", 
+        "cover_img": "https://raw.githubusercontent.com/vidurham/professional-portfolio/main/assets/images/weather.JPG"
+    }
+]

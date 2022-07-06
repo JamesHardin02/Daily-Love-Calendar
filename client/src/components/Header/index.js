@@ -14,8 +14,9 @@ export default function Header(props) {
     document.title = currentCategory.name;
   }, [currentCategory]);
   // useEffect(()=>{
-    
+  
   // }, [currentCategory]);
+
   return (
     <header className='bg-red-900 flex flex-col mb-2'>
       <a className='navActive text-center flex flex-col justify-center sm:w-96 sm:self-center'data-testid="link" href="/">
